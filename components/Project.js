@@ -79,8 +79,8 @@ const Project = ({ title = '', desc = '', stack = [], git = '', url = '', images
 
   return (
 		<div ref={el} className='lg:flex lg:flex-row-reverse lg:gap-12'>
-			<div className='w-full max-w-[500px] rounded-[1.5rem] mx-auto project-image relative'>
-				<div className='overflow-hidden rounded-[1rem] cursor-pointer border-[1px] border-neutral-200 bg-neutral-50'>
+			<div className='w-full max-w-[500px] mx-auto project-image relative'>
+				<div className='overflow-hidden rounded-xl cursor-pointer border-[1px] border-neutral-200 bg-neutral-50'>
 					<ImageCarousel images={images} />
 				</div>
 				<div className='w-full h-full bg-white absolute left-0 top-0 image-cover'></div>

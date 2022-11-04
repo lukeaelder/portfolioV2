@@ -15,7 +15,7 @@ const ImageCarousel = ({ images }) => {
 			<div className='embla__container flex'>
 				{images.map((e, i) => (
 					<div key={i} className='relative flex-[0_0_100%]'>
-						<img src={e} alt='Project Image' className='object-cover'></img>
+						<img src={e} alt='Project Image' className='object-cover rounded-xl'></img>
 					</div>
 				))}
 			</div>
