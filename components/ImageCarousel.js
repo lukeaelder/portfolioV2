@@ -1,5 +1,6 @@
 import useEmblaCarousel from 'embla-carousel-react';
 import Autoplay from 'embla-carousel-autoplay';
+import Image from 'next/image';
 
 const ImageCarousel = ({ images }) => {
 	const [emblaRef] = useEmblaCarousel({ loop: true }, [
@@ -15,7 +16,17 @@ const ImageCarousel = ({ images }) => {
 			<div className='embla__container flex'>
 				{images.map((e, i) => (
 					<div key={i} className='relative flex-[0_0_100%]'>
-						<img src={e} alt='Project Image' className='object-cover rounded-xl'></img>
+						<div className='object-cover rounded-xl w-full h-full relative'>
+							<Image
+								src={e}
+								alt='Project Image'
+								width='640px'
+								height='330px'
+								objectFit='contain'
+								layout='responsive'
+								priority={true}
+							/>
+						</div>
 					</div>
 				))}
 			</div>
